@@ -1,7 +1,4 @@
 # Online Track Explanation
-## Source code
-The code of our submission can be found at this link: https://github.com/MCZhi/Predictive-Decision/tree/smarts-comp-track1
-
 ## Technique
 We are using a Transformer-based motion predictor to forecast the neighboring agents' future trajectories around the ego vehicle. A sampling-based planner will do collision checking and select the optimal trajectory considering the distance to the goal, ride comfort, and safety. The prediction/planning horizon is 3 seconds and we only execute the first five steps (0.5s) of the planned trajectory. The overall process of our method is given below.
 
