@@ -1,1 +1,1 @@
-# 2022 NeurIPS Driving SMARTS Competition Track 1 solution
+# 2022 NeurIPS Driving SMARTS Competition Track 1 Solution
