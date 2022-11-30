@@ -22,7 +22,7 @@ conda install pytorch==1.12.0 -c pytorch
 ```
 
 ### Training
-Run `train.py`. Leave the arguments vacant to use the default setting.
+Run `train.py`. Leave other arguments vacant to use the default setting.
 ```bash
 python train.py --use_exploration --use_interaction
 ```
