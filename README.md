@@ -1,6 +1,9 @@
 # Predictive-Decision-making
 
 ## Framework
+We propose an interaction-aware predictor to forecast the neighboring agents' future trajectories around the ego vehicle conditioned on the ego vehicle's potential plans. A sampling-based planner will do collision checking and select the optimal trajectory considering the distance to the goal, ride comfort, and safety. The overall framework of our method is given below.
+
+![Overview of our method](./docs/process.png)
 
 ## Results
 
