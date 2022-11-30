@@ -22,15 +22,15 @@ conda install pytorch==1.12.0 -c pytorch
 ```
 
 ### Training
-Run `train.py` in the `train` folder. Leave the arguments vacant to use the default setting.
+Run `train.py`. Leave the arguments vacant to use the default setting.
 ```bash
-python train.py --epochs 1000 --batch_size 64 --learning_rate 2e-4 --device cuda
+python train.py --use_exploration --use_interaction
 ```
 
 ### Testing
-Run `test.py` test the framework. You need specify the path to the trained predictor. can set `--envision` to visualize the performance of the framework in envision or set `--sumo` to visualize in sumo.
+Run `test.py`. You need specify the path to the trained predictor `--model_path`. You can aslo set `--envision_gui` to visualize the performance of the framework in envision or set `--sumo_gui` to visualize in sumo.
 ```bash
-python test.py --episodes 50 --envisoin
+python test.py --model_path /training_log/Exp/model.pth
 ```
 To visualize in Envision (some bugs exist in showing the road map), you need to manually start the envision server and then go to `http://localhost:8081/`.
 ```bash
