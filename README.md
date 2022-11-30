@@ -33,7 +33,7 @@ Run `test.py` in the `submission` folder to test the framework with our pretrain
 ```bash
 python test.py --episodes 50 --envisoin
 ```
-To visualize in Envision (some bugs exist in showing the road map), you need to manually start the envision server.
+To visualize in Envision (some bugs exist in showing the road map), you need to manually start the envision server and then go to `http://localhost:8081/`.
 ```bash
-scl envision start
+scl envision start -p 8081
 ```
