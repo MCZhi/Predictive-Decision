@@ -150,7 +150,7 @@ class Planner(object):
 
         return cost, collision
 
-    def plan(self, data ):
+    def plan(self, data):
         obs = data[0]
         env_input = data[1]
 

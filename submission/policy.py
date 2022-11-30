@@ -42,7 +42,7 @@ class FormatObs(gym.ObservationWrapper):
 class FormatAct(gym.ActionWrapper):
     def __init__(self, env):
         super().__init__(env)
-        self.cycle = 5
+        self.cycle = 3
 
     def action(self, action, step):
         wrapped_act = {}

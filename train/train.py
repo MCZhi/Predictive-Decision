@@ -73,14 +73,10 @@ def main(args):
         while not dones["__all__"]:
             # plan
             env_input = observer(observations['Agent_0'])
-            if args.use_exploration:
-                training = False if np.random.rand() < np.clip(0.001 * train_epoch, 0, 1) else True
-            else:
-                training = False
-            actions = planner.plan(observations['Agent_0'], env_input, training)
+            actions = planner.plan(observations['Agent_0'], env_input)
 
-            # execute 5 steps
-            for t in range(5):
+            # execute 3 steps
+            for t in range(3):
                 action = {'Agent_0': actions[t]}
                 observations, rewards, dones, infos = env.step(action)
                 timesteps += 1
@@ -150,7 +146,7 @@ if __name__ == "__main__":
     parser.add_argument('--epochs', type=int, help='training epochs (default: 5000)', default=5000)
     parser.add_argument('--batch_size', type=int, help='batch size (default: 64)', default=128)
     parser.add_argument('--learning_rate', type=float, help='learning rate (default: 2e-4)', default=2e-4)
-    parser.add_argument('--device', type=str, help='run on which device (default: cuda)', default='cuda:0')
+    parser.add_argument('--device', type=str, help='run on which device (default: cuda)', default='cuda')
     args = parser.parse_args()
 
     main(args)

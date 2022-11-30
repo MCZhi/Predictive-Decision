@@ -146,13 +146,7 @@ class Planner(object):
 
         return cost, collision
 
-    def plan(self, obs, env_input, training=False):
-        # set cost function weigths
-        if training:
-            self.cost_weights[-3:] = np.zeros(shape=(3,))
-        else:
-            self.cost_weights[-3:] = np.array([1, 5, 10])
-
+    def plan(self, obs, env_input):
         # generate trajectories
         self.ego_state = obs.ego_vehicle_state
         routes = self.generate_routes(obs.waypoint_paths)
