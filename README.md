@@ -1,9 +1,6 @@
 # 2022 NeurIPS Driving SMARTS Competition Track 1 Solution
-InterSim is a simulator for closed-loop interactive simulations with real on-road data and maps. Without over-promising, the best use case for InterSim Beta is to test your planning system before deployment extensively. If you want to test your planner with a large real-world dataset, you should consider InterSim. InterSim models real-world drivers' behaviors against new conflicts with relation prediction models. InterSim now supports both Waymo Open Motion Dataset and the NuPlan dataset.
 
 # How to use
-
-InterSim runs on pure Python with NO C/C++, NO ROS, and NO CARLA. InterSim is designed to be light and easy to use for all researchers.
 
 ## Create a new Conda environment
 ```bash
@@ -26,14 +23,14 @@ conda install pytorch==1.12.0 -c pytorch
 ```
 
 ## Training
-Run the. You can speficy
+Run `train.py` in the `train` folder. Leave the arguments vacant to use the default setting.
 ```bash
-python train.py
+python train.py --epochs 1000 --batch_size 64 --learning_rate 2e-4 --device cuda
 ```
 
 ## Testing
-Run the testing. You can speficy
+Run `test.py` in the `submission` folder to test the framework with our pretrained model. You can set `--envision` to visualize the performance of the framework in envision or set `--sumo` to visualize in sumo.
 ```bash
-python train.py
+python test.py --episodes 50 --envisoin
 ```
 
