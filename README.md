@@ -1,5 +1,5 @@
 # 2022 NeurIPS Driving SMARTS Competition Track 1 Solution
-This repo contains the 3rd place and the most innovative solution to the 2022 NeurIPS Driving SMARTS Competition. The details of the framework and the prediction network are given [here](https://github.com/MCZhi/Predictive-Decision/blob/smarts-comp-track1/submission/README.md).
+This repo contains the 3rd place and the most innovative solution in the 2022 NeurIPS Driving SMARTS Competition. The details of the framework and the prediction network are given [here](https://github.com/MCZhi/Predictive-Decision/blob/smarts-comp-track1/submission/README.md).
 
 ## How to use
 
