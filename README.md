@@ -6,7 +6,8 @@ We propose an interaction-aware predictor to forecast the neighboring agents' fu
 ![Overview of our method](./docs/process.png)
 
 ## Results
-
+Examples of our framework navigating in various scenarios are shown below.
+ 
 ## How to use
 ### Create a new Conda environment
 ```bash
@@ -43,3 +44,5 @@ To visualize in Envision (some bugs exist in showing the road map), you need to 
 ```bash
 scl envision start -p 8081
 ```
+
+## Citation
