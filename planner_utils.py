@@ -246,21 +246,6 @@ class FrenetPath:
         self.ds = []
         self.c = []
 
-def generate_target_course(x, y):
-    csp = CubicSpline2D(x, y)
-    s = np.arange(0, csp.s[-1], 0.1)
-
-    rx, ry, ryaw, rk = [], [], [], []
-    for i_s in s:
-        ix, iy = csp.calc_position(i_s)
-        rx.append(ix)
-        ry.append(iy)
-        ryaw.append(csp.calc_yaw(i_s))
-        rk.append(csp.calc_curvature(i_s))
-
-    return rx, ry, ryaw, rk, csp
-
-
 class QuinticPolynomial:
     def __init__(self, xs, vxs, axs, xe, vxe, axe, time):
         self.a0 = xs
@@ -330,6 +315,23 @@ class CubicPolynomial:
         xt = 2 * self.a2 + 6 * self.a3 * t
 
         return xt
+
+def generate_target_course(x, y):
+    csp = CubicSpline2D(x, y)
+    s = np.arange(0, csp.s[-1], 0.1)
+
+    rx, ry, ryaw, rk = [], [], [], []
+    for i_s in s:
+        ix, iy = csp.calc_position(i_s)
+        rx.append(ix)
+        ry.append(iy)
+        ryaw.append(csp.calc_yaw(i_s))
+        rk.append(csp.calc_curvature(i_s))
+
+    return rx, ry, ryaw, rk, csp
+
+def wrap_to_pi(theta):
+    return (theta+np.pi) % (2*np.pi) - np.pi
 
 def generate_lon_profile(v_s, a_s, acc): 
     v_target = np.clip(v_s + acc * 3, 0, 16)

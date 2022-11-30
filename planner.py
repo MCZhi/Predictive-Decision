@@ -2,7 +2,7 @@ import torch
 import matplotlib.pyplot as plt
 from planner_utils import *
 from smarts.core.road_map import Waypoint
-from smarts.core.utils.math import signed_dist_to_line, radians_to_vec, _gen_ego_frame_matrix, constrain_angle
+from smarts.core.utils.math import signed_dist_to_line, radians_to_vec, _gen_ego_frame_matrix, constrain_angle, wrap_value
 
 class Planner(object):
     def __init__(self, predictor=None, use_interaction=False, render=False):
@@ -131,9 +131,9 @@ class Planner(object):
 
             # transform to ego frame
             transform_matrix = _gen_ego_frame_matrix(self.ego_state.heading+np.pi/2)
-            ego_rel_traj = plan_array[:, :3] - np.asarray(self.ego_state.position)
-            plan_array[:, :3] = np.matmul(transform_matrix, ego_rel_traj.T).T
-            plan_array[:, 2] = (plan_array[:, 2] - (self.ego_state.heading+np.pi/2) + np.pi) % (2*np.pi) - np.pi
+            ego_rel_traj = plan_array[:, :2] - self.ego_state.position[:2]
+            plan_array[:, :2] = np.matmul(transform_matrix[:2, :2], ego_rel_traj.T).T
+            plan_array[:, 2] = wrap_to_pi(plan_array[:, 2] - (self.ego_state.heading+np.pi/2))
 
             # to tensor
             plan = torch.from_numpy(plan_array).unsqueeze(0).float().to(self.device)
