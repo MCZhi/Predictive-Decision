@@ -8,13 +8,13 @@ We propose an interaction-aware predictor to forecast the neighboring agents' fu
 ## Results
 Examples of our framework navigating in various scenarios are shown below.
 ### Left turn
-<video muted controls width=500> <source src="./docs/cf4c93a51f255da.mp4"  type="video/mp4"> </video>
+<video muted controls width=500> <source src="./docs/left_turn_c.mp4"  type="video/mp4"> </video>
 
 ### Merge
-<video muted controls width=500> <source src="./docs/cf4c93a51f255da.mp4"  type="video/mp4"> </video>
+<video muted controls width=500> <source src="./docs/merge.mp4"  type="video/mp4"> </video>
 
 ### Overtake
- <video muted controls width=500> <source src="./docs/cf4c93a51f255da.mp4"  type="video/mp4"> </video>
+ <video muted controls width=500> <source src="./docs/overtake.mp4"  type="video/mp4"> </video>
  
 ## How to use
 ### Create a new Conda environment
