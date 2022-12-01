@@ -8,7 +8,7 @@ We propose an interaction-aware predictor to forecast the neighboring agents' fu
 ## Results
 Examples of our framework navigating in various scenarios are shown below.
 ### Left turn
-<video src='./docs/left_turn_c.mp4' width=500/>
+![left turn](./docs/left_turn_c.gif)
 
 ### Merge
 <video muted controls width=500> <source src="./docs/merge.mp4"  type="video/mp4"> </video>
