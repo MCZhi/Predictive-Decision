@@ -53,11 +53,5 @@ scl envision start -p 8081
 ## Citation
 If you find this repo to be useful in your research, please consider citing our work
 ```
-@article{huang2021driving,
-  title={Driving Behavior Modeling Using Naturalistic Human Driving Data With Inverse Reinforcement Learning},
-  author={Huang, Zhiyu and Wu, Jingda and Lv, Chen},
-  journal={IEEE Transactions on Intelligent Transportation Systems},
-  year={2021},
-  publisher={IEEE}
-}
+
 ```
