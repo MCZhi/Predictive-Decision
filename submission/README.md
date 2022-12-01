@@ -13,13 +13,6 @@ The structure of the planner is illustrated below. First, the planner generates 
 ## Training process
 For each ego vehicle in the provided offline scenario, we extract its neighborhood vehicles' states at all time points. At each training step, we obtain a batch of data on the ego vehicle's five closest neighbors' historical states and their ground-truth future trajectories. The batch size equals the length of timesteps of the scenario minus the future horizon. The position and heading attributes of the input data are normalized according to the ego vehicle's state at every timestep. The training loss is the sum of trajectory regression loss (smooth L1 loss) on the closest-to-ground truth trajectory and cross-entropy loss of the predicted scores (the closest-to-ground truth mode is the target).
 
-## Related papers
-The paper related to our submission is named "Online Learning of Interaction-aware Motion Prediction for Decision-making of Autonomous Driving", which is under review by ICRA 2023. 
-We will publish a preprint version soon.
-
-## Source code
-https://github.com/MCZhi/Predictive-Decision/tree/smarts-comp-track2
-
 ## Docker image
 docker pull mczhi66/smarts_torch:latest
 https://hub.docker.com/repository/docker/mczhi66/smarts_torch
