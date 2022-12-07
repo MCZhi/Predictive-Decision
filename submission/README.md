@@ -14,7 +14,3 @@ The structure of the planner is illustrated below. First, the planner generates 
 
 ## Training process
 An agent equipped with our planner and predictor is set to interact with the environment. We maintain an episodic buffer to store the trajectories of all agents in the environment and dump the data into a replay buffer at the end of each episode. At each training step, we sample a batch of data from the replay buffer from different episodes and timesteps. We can obtain the historical trajectories of the agents and their ground-truth future trajectories at each timestep from the episodic memory. We randomly select a vehicle as the ego vehicle and find its surrounding vehicles to improve the generalization ability of the predictor. The position and heading attributes of the input data are normalized according to the ego vehicle's state at that timestep. The training loss is the sum of trajectory regression loss (smooth L1 loss) on the closest-to-ground truth trajectory and cross-entropy loss of the predicted scores (the closest-to-ground truth mode is the target).
-
-## Related papers
-The paper related to our submission is named "Online Learning of Interaction-aware Motion Prediction for Decision-making of Autonomous Driving", which is under review by ICRA 2023. 
-We will publish a preprint version soon.
