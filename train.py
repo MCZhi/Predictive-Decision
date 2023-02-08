@@ -25,7 +25,8 @@ def main(args):
 
     envs = {}
     for scen in scenarios:
-        envs[f"{scen}"] = gym.make('smarts.env.gymnasium:driving-smarts-competition-v0', scenario=scen, headless=not args.envision_gui, sumo_headless=not args.sumo_gui)
+        envs[f"{scen}"] = gym.make('smarts.env.gymnasium:driving-smarts-competition-v0', action_space="TargetPose", scenario=scen, 
+                                   headless=not args.envision_gui, sumo_headless=not args.sumo_gui)
 
     # create training log
     log_path = f"./training_log/{args.name}/"
