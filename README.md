@@ -65,7 +65,7 @@ scl envision start -p 8081
 ## Citation
 If you find this repo to be useful in your research, please consider citing our work
 ```
-@article{huang2022differentiable,
+@article{huang2023learning,
   title={Learning Interaction-aware Motion Prediction Model for Decision-making in Autonomous Driving},
   author={Huang, Zhiyu and Liu, Haochen and Huang, Wenhui, and Wu, Jingda and Lv, Chen},
   journal={arXiv preprint arXiv:2302.10422},
