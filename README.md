@@ -32,6 +32,7 @@ conda create -n smarts python=3.8
 ```
 
 ### Install the SMARTS simulator
+First, we'll create a conda environment.
 ```bash
 conda activate smarts
 ```
