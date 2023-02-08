@@ -41,7 +41,8 @@ def main(args):
 
     for scene in scenarios:
         print(f'============={scene}=============')
-        env = gym.make('smarts.env.gymnasium:driving-smarts-competition-v0', scenario=scene, headless=not args.envision_gui, sumo_headless=not args.sumo_gui)
+        env = gym.make('smarts.env.gymnasium:driving-smarts-competition-v0', action_space="TargetPose", scenario=scene, 
+                       headless=not args.envision_gui, sumo_headless=not args.sumo_gui)
         observer = observation_adapter(env=env, num_neighbors=5)
 
         eval_episodes = args.episodes
