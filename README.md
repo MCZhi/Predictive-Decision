@@ -37,10 +37,8 @@ First, we'll create a conda environment.
 conda activate smarts
 ```
 
-Install [SMARTS simulator](https://github.com/huawei-noah/SMARTS).
-```bash
-pip install "smarts[camera-obs] @ git+https://github.com/huawei-noah/SMARTS.git@comp-1"
-```
+Then, install the [SMARTS simulator](https://github.com/huawei-noah/SMARTS). Follow the official guidelines.
+
 
 ### Install Pytorch
 ```bash
