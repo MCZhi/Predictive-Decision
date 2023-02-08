@@ -32,13 +32,11 @@ conda create -n smarts python=3.8
 ```
 
 ### Install the SMARTS simulator
-First, we'll create a conda environment.
 ```bash
 conda activate smarts
 ```
 
-Then, install the [SMARTS simulator](https://github.com/huawei-noah/SMARTS). Follow the official guidelines.
-
+Install the [SMARTS simulator](https://github.com/huawei-noah/SMARTS). Follow the official guidelines.
 
 ### Install Pytorch
 ```bash
