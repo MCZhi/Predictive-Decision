@@ -1,5 +1,14 @@
 # Predictive-Decision-making
 
+This repository contains the code for the following paper:
+
+**Learning Interaction-aware Motion Prediction Model for Decision-making in Autonomous Driving**
+<br> [Zhiyu Huang](https://mczhi.github.io/), [Haochen Liu](https://scholar.google.com/citations?user=iizqKUsAAAAJ&hl=en), [Jingda Wu](https://wujingda.github.io/), [Wenhui Huang](https://scholar.google.co.kr/citations?user=Hpatee0AAAAJ&hl=en), [Chen Lv](https://scholar.google.com/citations?user=UKVs2CEAAAAJ&hl=en) 
+<br> [AutoMan Research Lab, Nanyang Technological University](https://lvchen.wixsite.com/automan)
+<br> **[[arXiv]](https://arxiv.org/abs/2207.10422)**
+
+If you are looking for or interested in our winning solutions at [NeurIPS 2022 Driving SMARTS Competition](https://smarts-project.github.io/archive/2022_nips_driving_smarts/), please go to [track 1 solution](https://github.com/MCZhi/Predictive-Decision/tree/smarts-comp-track1) and [track 2 solution](https://github.com/MCZhi/Predictive-Decision/tree/smarts-comp-track2).
+
 ## Framework
 We propose an interaction-aware predictor to forecast the neighboring agents' future trajectories around the ego vehicle conditioned on the ego vehicle's potential plans. A sampling-based planner will do collision checking and select the optimal trajectory considering the distance to the goal, ride comfort, and safety. The overall framework of our method is given below.
 
