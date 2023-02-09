@@ -36,7 +36,7 @@ conda create -n smarts python=3.8
 conda activate smarts
 ```
 
-Install the [SMARTS simulator](https://smarts.readthedocs.io/en/latest/setup.html). Follow the official guidelines. Before installing the library, please make sure you have switched to ```comp-1``` branch.
+Install the [SMARTS simulator](https://smarts.readthedocs.io/en/latest/setup.html). Follow the official guidelines. Before installing the library, please make sure you have switched to the ```comp-1``` branch.
 ```bash
 git checkout comp-1
 ```
