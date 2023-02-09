@@ -64,7 +64,7 @@ If you find this repo to be useful in your research, please consider citing our 
 ```
 @article{huang2023learning,
   title={Learning Interaction-aware Motion Prediction Model for Decision-making in Autonomous Driving},
-  author={Huang, Zhiyu and Liu, Haochen and Huang, Wenhui, and Wu, Jingda and Lv, Chen},
+  author={Huang, Zhiyu and Liu, Haochen and Wu, Jingda and Huang, Wenhui and Lv, Chen},
   journal={arXiv preprint arXiv:2302.03939},
   year={2023}
 }
