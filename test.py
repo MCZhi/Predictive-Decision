@@ -33,7 +33,7 @@ def main(args):
     os.makedirs(log_path, exist_ok=True)
     success_rate = []
     test_epoch = 0
-    policy = Policy(args.model_path)
+    policy = Policy(args.model_path, use_interaction=args.use_interaction)
 
     with open(log_path+"test_log.csv", 'w') as csv_file: 
         writer = csv.writer(csv_file) 
@@ -86,6 +86,7 @@ if __name__ == "__main__":
     parser.add_argument('--name', type=str, help='log name (default: "Test1")', default="Test1")
     parser.add_argument('--episodes', type=int, help='test episodes (default: 50)', default=50)
     parser.add_argument('--model_path', type=str, help='path to the saved model')
+    parser.add_argument('--use_interaction', action='store_true', help='whether using interaction-aware prediction', default=False)
     parser.add_argument('--envision_gui', action='store_true', help='visualize in envision', default=False)
     parser.add_argument('--sumo_gui', action='store_true', help='visualize in sumo', default=False)
     args = parser.parse_args()
